@@ -1,0 +1,229 @@
+:root {
+    --Orange: hsl(26, 100%, 55%);
+    --Orange-hover: hsla(26, 100%, 71%, 1);
+    --Pale-orange: hsl(25, 100%, 94%);
+    --Very-dark-blue: hsl(220, 13%, 13%);
+    --Dark-grayish-blue: hsl(219, 9%, 45%);
+    --Grayish-blue: hsl(220, 14%, 75%);
+    --Light-grayish-blue: hsl(223, 64%, 98%);
+    --Lightbox-background: hsla(0, 0%, 0%, 0.75);
+}
+* {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    max-width: 1440px;
+    margin: 28px 165px 128px;
+}
+/* MENU */
+header {
+    width: 100%;
+    height: 84px;
+    display: flex;
+    align-items: baseline;
+    border-bottom: 1px solid hsla(219, 35%, 92%, 1);
+    position: relative;
+}
+.logo {
+    padding-top: 15px;
+    cursor: pointer;
+}
+.menu {
+    display: flex;
+    height: 26px;
+    list-style: none;
+    gap: 32px;
+    margin: 0 56.5px;
+}
+.menu li a {
+    font-size: 15px;
+    color: var(--Dark-grayish-blue);
+    text-decoration: none;
+    position: relative;
+}
+.menu li a::after {
+    content:'';
+    position: absolute;
+    top: 58px;
+    left: 50%;
+    width: 0px;
+    height: 4px;
+    background: var(--Orange);
+    transition: all 300ms ease-in-out;
+}
+.menu li a:hover::after {
+    left: 5%;
+    width: 90%;
+}
+.avatar {
+    width: 53px;
+    border: 2px solid white;
+    cursor: pointer;
+    border-radius: 50px;
+}
+.avatar:hover {
+    border: 2px solid var(--Orange);
+}
+.profile {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    gap: 46.18px;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    gap: 125px;
+    margin: 90px 47px 0 48px;
+}
+
+/* FOTOS */
+.fotos {
+    width: 445px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.foto-grande {
+    width: 445px;
+    border-radius: 15px;
+}
+.thumbnails {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 31px;
+}
+.thumbnails img {
+    width: 88px;
+    border-radius: 10px;
+}
+.thumbnails img:hover {
+    opacity: 50%;
+}
+.primeira {
+    border: 2px solid #FF7E1B;
+    border-radius: 12px;
+    width: 92px;
+    height: 92px;
+}
+.primeira img {
+    opacity: 0.25;
+}
+/* DESCRIÇÃO */
+.descricao {
+    margin-top: 62px;
+}
+.descricao h4 {
+    color: var(--Orange);
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 27px;
+}
+.descricao h2 {
+    font-size: 44px;
+    margin-bottom: 32px;
+}
+.descricao-p {
+    color: var(--Dark-grayish-blue);
+    line-height: 26px;
+    margin-bottom: 28px;
+}
+.preco {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 10px;
+}
+.preco h3 {
+    font-size: 28px;
+}
+.desconto {
+    width: 51px;
+    height: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Pale-orange);
+    color: var(--Orange);
+    border-radius: 6px;
+    font-weight: 700;
+}
+.full-price {
+    font-weight: 700;
+    color: var(--Grayish-blue);
+    text-decoration: line-through;
+    margin-bottom: 32px;
+}
+.comprar {
+    display: flex;
+    gap: 16px;
+    height: 56px;
+}
+.contador {
+    display: flex;
+    gap: 45.5px;
+    align-items: center;
+    padding: 22px 16px;
+    background-color: var(--Light-grayish-blue);
+    border-radius: 10px;
+}
+button {
+    cursor: pointer;
+    border: none;
+}
+.contador button {
+    display: flex;
+    align-items: center;
+    background-color: var(--Light-grayish-blue);
+    height: 12px;
+    width: 12px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.menos {
+    background-image: url(../images/icon-minus.svg);
+}
+.menos:hover {
+    background-image: url(../images/icon-minus-hover.svg);
+}
+.mais {
+    background-image: url(../images/icon-plus.svg);
+}
+.mais:hover {
+    background-image: url(../images/icon-plus-hover.svg);
+}
+.add-cart {
+    width: 272px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15.5px;
+    background-color: var(--Orange);
+    border-radius: 10px;
+    color: white;
+    font-weight: 700;
+}
+.add-cart:hover {
+    background-color: var(--Orange-hover);
+}
+.add-cart img {
+    filter: contrast(100) invert(100);
+}
+/* FOOTER */
+.footer {
+    font-size: 11px;
+    width: 100%;
+    text-align: center;
+    margin: 50px
+  }
+.footer a {
+    font-size: 11px;
+    color: hsl(228, 45%, 44%);
+}
